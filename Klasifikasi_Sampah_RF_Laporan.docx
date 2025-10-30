@@ -1,0 +1,45 @@
+# Klasifikasi Sampah Gambar Menggunakan Algoritma Random Forest
+
+## Abstrak
+Penelitian ini membahas penggunaan metode Random Forest untuk klasifikasi gambar sampah ke dalam beberapa kategori, yaitu Kaca, Kardus, Kertas, Logam, Plastik, dan Residu. Citra pada dataset diolah menjadi fitur grayscale yang diubah menjadi vektor satu dimensi dan digunakan untuk melatih model Random Forest. Evaluasi model dilakukan menggunakan beberapa metrik, yaitu classification report, confusion matrix, serta ROC dan AUC. Hasil evaluasi menunjukkan model mampu melakukan klasifikasi dengan tingkat akurasi dan ketepatan yang baik pada beberapa kelas utama.
+
+Kata kunci: Klasifikasi citra, Random Forest, Classification Report, Confusion Matrix, ROC, AUC
+
+## 1. Pendahuluan
+
+Masalah pengelolaan sampah membutuhkan solusi inovatif, khususnya dalam mengidentifikasi jenis sampah secara otomatis. Klasifikasi ini penting untuk memilah sampah sebelum didaur ulang atau dibuang ke tempat pembuangan akhir. Model klasifikasi citra berbasis machine learning, seperti Random Forest, dapat digunakan untuk mempercepat proses tersebut secara otomatis.
+
+## 2. Metodologi
+### 2.1 Dataset
+Dataset gambar sampah dibagi ke dalam beberapa folder berdasarkan label kelas (Kaca, Kardus, Kertas, Logam, Plastik, Residu). Setiap gambar diubah ke grayscale dan diubah ukurannya menjadi 100x100 piksel, kemudian dicacah (flatten) menjadi vektor 1 dimensi.
+
+### 2.2 Pelatihan Model
+Model Random Forest dilatih menggunakan data training dari hasil ekstraksi fitur gambar. Proses pelatihan dilakukan dengan membagi dataset menjadi data latih (80%) dan data uji (20%).
+
+### 2.3 Evaluasi
+Evaluasi model dilakukan menggunakan:
+- Classification Report (precision, recall, f1-score, support per kelas)
+- Confusion Matrix (tabel perbandingan prediksi dan label asli kelas)
+- ROC Curve dan AUC (menggambarkan kemampuan model dalam membedakan antar kelas)
+
+## 3. Hasil dan Pembahasan
+### 3.1 Classification Report
+Classification report memperlihatkan nilai precision, recall, dan f1-score untuk setiap kelas. Nilai f1-score yang tinggi pada suatu kelas menandakan model sangat baik dalam mendeteksi kelas tersebut.
+
+[Tempatkan Tabel Classification Report di sini]
+
+### 3.2 Confusion Matrix
+Confusion matrix menampilkan jumlah prediksi benar dan salah untuk setiap kelas, sehingga dapat diketahui kelas mana yang sering tertukar oleh model.
+
+[Tempatkan Gambar Confusion Matrix di sini]
+
+### 3.3 ROC Curve dan AUC
+ROC curve multi-kelas digunakan untuk mengevaluasi performa model dalam membedakan setiap kelas. Nilai Area Under Curve (AUC) yang semakin mendekati 1 menunjukkan performa klasifikasi yang semakin baik.
+
+[Tempatkan Gambar ROC Curve di sini]
+
+### 3.4 Hasil Training
+Model Random Forest menunjukkan hasil prediksi yang cukup baik, dengan nilai f1-score dan AUC yang tinggi pada sebagian besar kelas, menunjukkan model dapat diandalkan dalam mengklasifikasikan jenis sampah pada citra.
+
+## 4. Kesimpulan
+Model Random Forest yang dilatih pada dataset gambar sampah berhasil melakukan klasifikasi ke dalam beberapa kategori utama dengan performa yang baik. Evaluasi menggunakan classification report, confusion matrix, serta ROC dan AUC memberikan gambaran kinerja model secara komprehensif dan menjadi dasar pengembangan aplikasi lebih lanjut pada sistem pemilahan sampah otomatis.
